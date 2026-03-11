@@ -28,6 +28,10 @@ const PropertyConatctForm = ({property}) => {
     try {
       const res = await contactOwner({
         propertyId: property._id,
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
       });
 
       if(!res.success){
